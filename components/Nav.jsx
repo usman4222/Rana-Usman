@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 // icons
 import {
@@ -62,9 +63,17 @@ const Nav = () => {
             </div>
 
             {/* icon */}
-            <div>
-              <link.Icon aria-hidden />
-            </div>
+           <motion.div
+  className="flex items-center justify-center"
+  animate={{ scale: [1, 1.2, 1] }} // breathing animation
+  transition={{
+    duration: 2,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+>
+  {link.Icon && <link.Icon aria-hidden />}
+</motion.div>
           </Link>
         ))}
       </div>
