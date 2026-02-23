@@ -5,6 +5,7 @@ import ProjectsBtn from "../components/ProjectsBtn";
 import Avatar from "../components/Avatar";
 
 import { fadeIn } from "../variants";
+import WaveLoading from "../components/WaveLoading";
 
 const Home = () => {
   return (
@@ -74,6 +75,7 @@ const Home = () => {
           <Avatar />
         </motion.div>
       </div>
+      {/* <WaveLoading text="NeoLeaf" color="#4FD1C5" duration={3} /> */}
     </div>
   );
 };
